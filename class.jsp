@@ -1,41 +1,43 @@
-<%@ page language "java" import "java uil * paeEndingngTF-87%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
-    String name (sringesionogtribrtet(userame');
-    if(name=-null){
-       respontse. sendRediret'loginjip");
+    String name=(String)sessin.getAttribute("username");
+    if(name==null){
+       response.sendRedirect("login.jsp");
+    }
 %>
+
 <!DOCTYPE HTML>
 <html>
   <head>
-   <title>My JSP 'score jsp' starting page/ite>
-   <meta http-equiv-"pragma" content-="no-cache">
-   <meta http-equiv-"cache control" content="no cache">
-   <meta http-equiv-"expires" content "0">
-   <meta http-equiv-"keywords" content="keywordl,keyword2 keyword3">
-   <meta http-equiv-="description" content- "This is my page">
+   <title>My JSP 'score jsp' starting page</title>
+   <meta http-equiv="pragma" content="no-cache">
+   <meta http-equiv="cache control" content="no cache">
+   <meta http-equiv="expires" content="0">
+   <meta http-equiv="keywords" content="keywordl,keyword2 keyword3">
+   <meta http-equiv="description" content="This is my page">
   </head>
   <body>
-    <div style="text-align: center;">
-        <span syle=font-size: 24px;">班级管理</span>
+    <div style="text-align:center;">
+        <span style="font-size:24px;">班级管理</span>
     <hr/>
-    <h3>学生: <%-name %></h3>
+    <h3>学生: <%=name%></h3>
     <table>
      <tT>
-        <td>
-          <a href-*"ddlassjsp">班级录入</8>
+        <tr>
+          <a href="addlass.jsp">班级录入</a>
         </id>
         <ld>
-          <a href "modifylasjsp">班级修改</a>
+          <a href="modifylas.jsp">班级修改</a>
         </td>
         <td>
-          <a he=-"queylass">班级查询</a>
+          <a href="queryclass.jsp">班级查询</a>
         </td>
         <td>
-          <a hef="eClassjsp">班级删除</8>
+          <a href="delClass.jsp">班级删除</a>
         </td>
        </tr>
       </table>
-    <a hef-"gotujsp*>退出登录<
+      <a href="logout.jsp*>退出登录</a>
     </div>
    <body>
- <html>
+ </html>
